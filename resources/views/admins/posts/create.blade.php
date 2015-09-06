@@ -36,15 +36,19 @@
             <div class="col s12 m12 l12">
                 <div class="card-panel">
 
-                    <!--<div class="card-panel red lighten-3">
+                    @if ( $errors->has() )
+                    <div class="card-panel red lighten-3">
                         <h6 class="white-text">
                             <i class="mdi-action-account-circle prefix"></i>
                             Please check the following field(s)
                         </h6>
                         <ou class="white-text">
-                            <li>error 1</li>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
                         </ou>
-                    </div>-->
+                    </div>
+                    @endif
 
                     <h4 class="header2">Add New Post</h4>
                     <div class="row">
