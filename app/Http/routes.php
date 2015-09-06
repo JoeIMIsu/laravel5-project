@@ -19,11 +19,11 @@ Route::get('/', function () {
 /*Route::group( ['prefix'=>'v1'], function() {
     Route::controller('post', 'PostController');
 });*/
-    Route::controller('post', 'PostController');
+    //Route::controller('post', 'PostController');
 
-/*    Route::group( ['prefix'=>'v2'], function() {
-        Route::controller('post', 'PostController');
-    });*/
+Route::group( ['prefix'=>'admin'], function() {
+        Route::controller('post', 'Admins\PostController');
+});
 
 /*Route::get('/myroute', function() {
     return 'My Route';

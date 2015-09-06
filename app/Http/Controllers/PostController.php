@@ -14,17 +14,18 @@ class PostController extends Controller
 {
     public function getIndex()
     {
-        Post::chunk(5, function ($data) {
+       /* Post::chunk(5, function ($data) {
             foreach ($data as $item) {
                 echo $item->title.'<br />';
             }
-        });
+        });*/
 
 
        /* $data = Post::take(100)
                     ->orderBy('status', 'asc')
                     ->get();*/
        // return view('samples.admin.demoadmin', compact('data'));
+        return view('admins.posts.create');
     }
 
     public function getView($id =0)

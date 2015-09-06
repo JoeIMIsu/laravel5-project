@@ -1,7 +1,6 @@
-@extends('layouts.admins.default')
+@extends('layouts.admins.master')
 
 @section('content')
-
 <section id="content">
 
     <!--breadcrumbs start-->
@@ -16,7 +15,7 @@
                 <div class="col s12 m12 l12">
                     <h5 class="breadcrumbs-title">Links Innovation Co., Ltd</h5>
                     <ol class="breadcrumb">
-                        <li><a href="{{ URL::to('/admin/post') }}">Posts</a>
+                        <li><a href="{{ URL::to('admin/post') }}">Posts</a>
                         </li>
                         </li>
                         <li class="active">Add New Post</li>
@@ -37,21 +36,17 @@
             <div class="col s12 m12 l12">
                 <div class="card-panel">
 
-                    @if ($errors->has())
-                        <div class="card-panel red lighten-3">
-                            <h6 class="white-text">
-                                <i class="mdi-action-account-circle prefix"></i>
-                                Please check the following field(s)
-                            </h6>
-                            <ou class="white-text">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ou>
-                        </div>
-                    @endif
+                    <!--<div class="card-panel red lighten-3">
+                        <h6 class="white-text">
+                            <i class="mdi-action-account-circle prefix"></i>
+                            Please check the following field(s)
+                        </h6>
+                        <ou class="white-text">
+                            <li>error 1</li>
+                        </ou>
+                    </div>-->
 
-                    <h4 class="header2">Add New User</h4>
+                    <h4 class="header2">Add New Post</h4>
                     <div class="row">
                         <form class="col s12" id="form" name="form" method="POST" action="{{ URL::to('admin/post/store') }}">
                             <div class="row">
@@ -74,7 +69,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input type="hidden" id="_token" name="_token" value="{{ Session::token() }}">
+                                        {{ csrf_field() }}
                                         <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Submit
                                             <i class="mdi-content-send right"></i>
                                         </button>
@@ -88,5 +83,4 @@
         </div>
     </div>
 </section>
-
 @stop
