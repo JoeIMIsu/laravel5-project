@@ -56,4 +56,33 @@ class PostController extends Controller
         Session::flash('success', 'You add ['.$data->title.'] success.');
         return Redirect('admin/post');
     }
+
+    public function getEdit($id=0)
+    {
+        $data = Post::find($id);
+
+        return view('admins.posts.edit', compact('data'));
+    }
+
+    public function postUpdate(Request $request, $id=0)
+    {
+        $validator = $this->validator( Input::all() );
+
+        if ( $validator->fails() )
+        {
+            return Redirect('admin/post/create')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $data = Post::find($id);
+        $data->title = $request->title;
+        $data->slug = str_slug($request->title, "-");
+        $data->short = $request->short;
+        $data->description = $request->description;
+        $data->save();
+
+        Session::flash('success', 'You update ['.$data->title.'] success.');
+        return Redirect('admin/post');
+    }
 }
