@@ -12,35 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return Redirect('register');
 });
 
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'register' => 'RegisterController'
+    //'password' => 'Auth\PasswordController'
+]);
 
-/*Route::group( ['prefix'=>'v1'], function() {
-    Route::controller('post', 'PostController');
-});*/
-    //Route::controller('post', 'PostController');
+Route::get('myroute', 'RouteController@index');
+Route::get('myroute/view', 'RouteController@view');
+get('myroute/show/{id}', 'RouteController@show');
 
-Route::group( ['prefix'=>'admin'], function() {
-        Route::controller('post', 'Admins\PostController');
+Route::post('myroute/post', 'RouteController@post');
+
+
+Route::controller('sample', 'SampleController');
+Route::controller('user', 'UserController');
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::controller('post', 'Admin\PostController');
 });
-
-/*Route::get('/myroute', function() {
-    return 'My Route';
-});
-
-Route::get('/myroute/test', function () {
-    return Session::token();
-});
-
-Route::post('/myroute/test', function () {
-    return 'Test Post';
-});
-
-Route::put('/myroute/test', function () {
-    return 'Test Update';
-});
-
-Route::delete('/myroute/test', function () {
-    return 'Test Delete';
-});*/

@@ -3,19 +3,19 @@
 <head>
 
     <!-- ####################### HEADER BLOCK ####################### -->
-    @include('layouts.admins.includes.header')
+    @include('layouts.frontends.includes.header')
     <!-- ####################### HEADER BLOCK ####################### -->
 
 </head>
 <body>
 
 <!-- ####################### LOADING BLOCK ####################### -->
-@include('layouts.admins.includes.loading')
+@include('layouts.frontends.includes.loading')
 <!-- ####################### LOADING BLOCK ####################### -->
 
 
 <!-- ####################### HEAD BLOCK ####################### -->
-@include('layouts.admins.includes.head')
+@include('layouts.frontends.includes.head')
 <!-- ####################### HEAD BLOCK ####################### -->
 
 
@@ -25,7 +25,7 @@
     <div class="wrapper">
 
         <!-- ####################### NAV BLOCK ####################### -->
-        @include('layouts.admins.includes.nav')
+        @include('layouts.frontends.includes.nav')
         <!-- ####################### NAV BLOCK ####################### -->
 
         <!-- //////////////////////////////////// MAIN CONTENT //////////////////////////////////////// -->
@@ -39,7 +39,7 @@
 <!-- END MAIN -->
 
 <!-- ####################### FOOTER BLOCK ####################### -->
-@include('layouts.admins.includes.footer')
+@include('layouts.frontends.includes.footer')
 <!-- ####################### FOOTER BLOCK ####################### -->
 
 </body>

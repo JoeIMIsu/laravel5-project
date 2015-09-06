@@ -1,0 +1,23 @@
+body {margin:0; font:12px Verdana,Arial}
+#input {border:none; margin:0; padding:0; font:14px 'Courier New',Verdana; border:0}
+.te {border:1px solid #bbb; padding:0 1px 1px; font:12px Verdana,Arial; margin:25px}
+.te iframe {border:none}
+.teheader {border-bottom:1px solid #bbb; background:url(images/header-bg.gif) repeat; padding-top:1px}
+.teheader select {float:left; margin-top:5px}
+.tefont {margin-left:12px; float:right; margin-top:5px, width:50px; height:18px;  border-bottom:0px;}
+.tefont input.select-dropdown {width:150px; height:30px; font:14px Verdana,Arial; color:black; border:0px; }
+.tefont ul.select-dropdown li span{color:dimgrey; font:14px Verdana,Arial; padding:10px;}
+.tesize {float:right; margin:0 3px; }
+.tesize input.select-dropdown {width:70px; height:30px; font:14px Verdana,Arial; color:black; border:0px; }
+.tesize ul.select-dropdown li span{color:dimgrey; font:14px Verdana,Arial; padding:10px;}
+.testyle {float:right; margin-right:12px}
+.testyle input.select-dropdown {width:100px; height:30px; font:14px Verdana,Arial; color:black; border:0px; }
+.testyle ul.select-dropdown li span{color:dimgrey; font:14px Verdana,Arial; padding:10px;}
+.tedivider {display: inline-block; width:1px; height:30px; background:#ccc}
+.tecontrol {display: inline-block; width:34px; height:30px; cursor:pointer; background-image:url(images/icons.png)}
+.tecontrol:hover {background-color:#fff; background-position:30px 0}
+.tefooter {height:32px; border-top:1px solid #bbb; background:#f5f5f5}
+.toggle {float:left; background:url(images/icons.png) -34px 2px no-repeat; padding:9px 13px 0 31px; height:23px; border-right:1px solid #ccc; cursor:pointer; color:#666}
+.toggle:hover {background-color:#fff}
+.resize {float:right; height:32px; width:32px; background:url(images/resize.gif) 15px 15px no-repeat; cursor:s-resize}
+#editor {cursor:text; margin:10px}

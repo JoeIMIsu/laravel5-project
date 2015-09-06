@@ -32,7 +32,6 @@ trait AuthenticatesUsers
      */
     public function postLogin(Request $request)
     {
-        dd($request); exit;
         $this->validate($request, [
             $this->loginUsername() => 'required', 'password' => 'required',
         ]);

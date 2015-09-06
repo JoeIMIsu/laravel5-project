@@ -57,7 +57,7 @@
 
 <div id="login-page" class="row">
     <div class="col s12 z-depth-4 card-panel">
-        <form class="login-form" method="POST" action="#">
+        <form class="login-form" method="POST" action="{{ URL::to('/auth/login') }}">
             <div class="row">
                 <div class="input-field col s12 center">
                     <img src="{{ URL::asset('images/login-logo.png') }}" alt="" class="circle responsive-img valign profile-image-login">
@@ -67,7 +67,7 @@
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="mdi-social-person-outline prefix"></i>
-                    <input id="email" name="email" type="email" value="">
+                    <input id="email" name="email" type="email" value="{{ old('email') }}">
                     <label for="email" class="center-align">Email</label>
                 </div>
             </div>
@@ -91,10 +91,10 @@
             </div>
             <div class="row">
                 <div class="input-field col s6 m6 l6">
-                    <p class="margin medium-small"><a href="#">Register Now!</a></p>
+                    <p class="margin medium-small"><a href="{{ URL::to('register') }}">Register Now!</a></p>
                 </div>
             </div>
-           
+            {{ csrf_field() }}
         </form>
     </div>
 </div>

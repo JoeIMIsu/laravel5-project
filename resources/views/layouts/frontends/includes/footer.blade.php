@@ -3,7 +3,7 @@
     <div class="footer-copyright">
         <div class="container">
             <span>Copyright © 2015 <a class="grey-text text-lighten-4" href="https://www.facebook.com/linksinno" target="_blank">Links Innovation Co., Ltd</a> All rights reserved.</span>
-            <span class="right"> Developed by <a class="grey-text text-lighten-4" href="https://www.facebook.com/linksinno">Links Innovation</a></span>
+            <span class="right"> Developed by <a class="grey-text text-lighten-4" href="http://geekslabs.com/">Links Innovation</a></span>
         </div>
     </div>
 </footer>
@@ -22,3 +22,4 @@
 
 <!--plugins.js - Some Specific JS codes for Plugin Settings-->
 <script type="text/javascript" src="{{ URL::asset('js/plugins.js') }}"></script>
+<!-- END FOOTER -->
